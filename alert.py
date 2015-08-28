@@ -6,9 +6,9 @@ def mikroticconnect(num,mes):
     host = '172.16.0.253'
     tn = telnetlib.Telnet(host)
     out = tn.read_until('Login: ',5)
-    tn.write("admin\r\n")
+    tn.write("admin\r\n")# Edit "admin" on your login
     out = tn.read_until('Password: ',5)
-    tn.write("\r\n")
+    tn.write("password1\r\n")# Edit "password1" on your password
     out = tn.read_until('[admin@LabZV] > ',10)
     from os import system
     from sys import platform
